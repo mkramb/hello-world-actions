@@ -1,8 +1,6 @@
 name: Giphy
 
-on:
-  pull_request_review_comment:
-    types: [created, deleted]
+on: [pull_request_review, pull_request_review_comment]
 
 jobs:
   build:
@@ -10,6 +8,3 @@ jobs:
 
     steps:
       - uses: mkramb/giphy-action@releases/v1
-      - env:
-          GIPHY_API_SECRET: ${{ secrets.GIPHY_API_SECRET }}
-          GITHUB_API_SECRET: ${{ secrets.GITHUB_API_SECRET }}
