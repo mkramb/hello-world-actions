@@ -2,12 +2,13 @@ name: "Pull Request Labeler"
 
 on:
 - pull_request
+- pull_request_review_comment
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: mkramb/giphy-action@master
+    - uses: mkramb/giphy-action@release/v2
       with:
-        GIPHY_API_SECRET: ${{ secrets.GIPHY_API_SECRET }}
-        GITHUB_API_SECRET: ${{ secrets.GITHUB_API_SECRET }}
+        giphy-secret: ${{ secrets.GIPHY_API_SECRET }}
+        github-secret: ${{ secrets.GITHUB_API_SECRET }}
