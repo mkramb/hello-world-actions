@@ -1,2 +1,2 @@
-const chalk = require('chalk');
-console.log(chalk.blue('Hello world! Does it work?'));
+const chalk = require("chalk");
+console.log(chalk.blue("Hello worlfdsfdsfsdd! Does it work?"));
