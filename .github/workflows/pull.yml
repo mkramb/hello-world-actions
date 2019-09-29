@@ -1,0 +1,12 @@
+name: Giphy
+on: [pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: mkramb/giphy-action@master
+      - env:
+          GIPHY_API_SECRET: ${{ secrets.GIPHY_API_SECRET }}
+          GITHUB_API_SECRET: ${{ secrets.GITHUB_API_SECRET }}
