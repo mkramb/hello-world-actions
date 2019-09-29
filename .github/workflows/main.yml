@@ -1,22 +1,15 @@
 name: "Giphy"
 
-on:
-  pull_request:
-    types: [labeled,unlabeled,opened,edited]
+on: 
+  issue_comment:
+    types: [created]
 
 jobs:
-  build:
+  giphy:
+    name: Giphy
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@master
-
-    - name: Install
-      uses: mkramb/yarn-action@master
-      with:
-        args: 'install'
-
-    - name: Hello
-      uses: mkramb/yarn-action@master
-      with:
-        args: 'run hello'
+    - uses: mkramb/giphy-action@releases/v2
+    with:
+      giphy-secret: ${{ secrets.GIPHY_API_SECRET }}
+      github-secret: ${{ secrets.GITHUB_API_SECRET }}
