@@ -1,11 +1,13 @@
 name: "Pull Request Labeler"
+
 on:
 - pull_request
 
 jobs:
-  triage:
+  build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/labeler@v2
+    - uses: mkramb/giphy-action@master
       with:
-        repo-token: "${{ secrets.GITHUB_TOKEN }}"
+        GIPHY_API_SECRET: ${{ secrets.GIPHY_API_SECRET }}
+        GITHUB_API_SECRET: ${{ secrets.GITHUB_API_SECRET }}
