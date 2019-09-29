@@ -1,8 +1,5 @@
 name: "Giphy"
 
-on:
-- pull_request
-
 jobs:
   triage:
     runs-on: ubuntu-latest
