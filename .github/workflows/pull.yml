@@ -1,7 +1,9 @@
 name: "Giphy"
 
 on:
-  - pull_request_review_comment
+  pull_request:
+    branches:
+    - master
 
 jobs:
   build:
