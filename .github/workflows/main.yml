@@ -10,11 +10,11 @@ jobs:
     - uses: actions/checkout@master
 
     - name: Install
-      uses: mkramb/yarn-action@latest
+      uses: mkramb/yarn-action@master
       with:
         args: 'install'
 
     - name: Hello
-      uses: mkramb/yarn-action@latest
+      uses: mkramb/yarn-action@master
       with:
         args: 'run hello'
