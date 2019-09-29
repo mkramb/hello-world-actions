@@ -1,6 +1,8 @@
-name: Node CI
+name: "Giphy"
 
-on: [push]
+on:
+  pull_request:
+    types: [labeled,unlabeled,opened,edited]
 
 jobs:
   build:
