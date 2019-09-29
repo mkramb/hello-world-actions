@@ -8,12 +8,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@master
+
     - name: Install
-      uses: mkramb/yarn-action@v1
+      uses: mkramb/yarn-action@latest
       with:
         args: 'install'
 
     - name: Hello
-      uses: mkramb/yarn-action@v1
+      uses: mkramb/yarn-action@latest
       with:
         args: 'run hello'
