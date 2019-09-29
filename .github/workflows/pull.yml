@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: mkramb/giphy-action@master
+      - uses: mkramb/giphy-action@releases/v1
       - env:
           GIPHY_API_SECRET: ${{ secrets.GIPHY_API_SECRET }}
           GITHUB_API_SECRET: ${{ secrets.GITHUB_API_SECRET }}
