@@ -1,6 +1,8 @@
 name: Giphy
 
-on: [pull_request_review_comment]
+on:
+  pull_request_review_comment:
+    types: [created, deleted]
 
 jobs:
   build:
